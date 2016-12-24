@@ -1,3 +1,10 @@
 C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\Gumilev1.exe.config
 C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Gumilev1.exe
 C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Gumilev1.pdb
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Rost1.csprojResolveAssemblyReference.cache
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Gumilev1.Form1.resources
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Gumilev1.Properties.Resources.resources
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Rost1.csproj.GenerateResource.Cache
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\Gumilev1.exe
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\Gumilev1.pdb
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\ZedGraph.dll

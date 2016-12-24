@@ -66,7 +66,7 @@ namespace Gumilev1
         //МОДЕЛЬ РОСТА
         double o3(double M0, double gm, double bt, double t, double R0, double alp)
         {
-            double M = M0 - ((gm - bt) * t);
+            double M = M0 * ((gm - bt) * t);
             double R = R0 * Math.Exp(alp * t);
             double x = R / M;
             double Y = M * x;
@@ -75,7 +75,15 @@ namespace Gumilev1
 
         }
 
-      
+
+        /*
+      //КРИВАЯ M
+        double oM()
+        {
+
+
+        }
+        */
 
 
         //функция рисования ГРАФИКА
@@ -110,11 +118,14 @@ namespace Gumilev1
             PointPairList tr_list2 = new PointPairList();
             //       PointPairList tr_list3 = new PointPairList();
 
-            double xmin = -5;
+            double xmin = 0;
             double xmax = 5;
 
+            /*
             double ymin = -5;
             double ymax = 5;
+            */
+
 
             /*
                 //Двойной
@@ -147,7 +158,7 @@ namespace Gumilev1
                 // добавим в список точку
 
                 //  tr_list2.Add(x, o2(a, x, l2, y1, k2));
-                tr_list.Add(x, o3(M0,gm,bt,x,R0,alp);
+                tr_list.Add(x, o3(M0,gm,bt,x,R0,alp));
 
 
                 //orig
@@ -275,10 +286,7 @@ namespace Gumilev1
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(trackBar1.Value);
-            groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
-            //правила если-то
-
+      
 
             // образец функции убывания/увеличивания значения трекбара!!!
             /*
@@ -295,33 +303,35 @@ namespace Gumilev1
                 label1.Text = "Меньшая пассионарная напряженность уменьшает скорость процессов развития";
             */
 
-            
 
 
-            double x1 = Convert.ToDouble(trackBar2.Value);
-          //  groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
 
-            double y1 = Convert.ToDouble(trackBar3.Value);
-       //     groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
 
-            double l1 = Convert.ToDouble(trackBar4.Value);
-        //    groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
-            double k1 = Convert.ToDouble(trackBar5.Value);
-       //     groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
 
-            double l2 = Convert.ToDouble(trackBar6.Value);
-        //    groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
 
-            double k2 = Convert.ToDouble(trackBar7.Value);
-         //   groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
 
 
+
+
+            /*
             if (a > 0)
                 label2.Text = "При положительных значениях A наблюдается склонность к развитию процессов";
             if (a < 0)
                 label2.Text = "При отрицательных значениях наблюдается склонность к разложению";
-        
+        */
+             
+             
             /*
             else
                 label1.Text = "";
@@ -332,318 +342,132 @@ namespace Gumilev1
             //Отрисовываем графы
             //первый граф
             // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+            DrawGraph11(M0, R0, alp, bt, gm);
+          //  DrawGraph11(a, x1, y1, l1, l2, k1, k2);
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(trackBar1.Value);
-          //  groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
-            
 
-            double x1 = Convert.ToDouble(trackBar2.Value);
-              groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
-            //правила если-то
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
 
-              
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
+
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
 
 
 
-
-
-
-            double y1 = Convert.ToDouble(trackBar3.Value);
-            //     groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
-
-            double l1 = Convert.ToDouble(trackBar4.Value);
-            //    groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-            //     groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-            //    groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-            //   groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
-
-            label1.Text = "Под сложностью структуры государства мы подразумеваем степень политической дифференциации, количество политических институтов";
+           // label1.Text = "Под сложностью структуры государства мы подразумеваем степень политической дифференциации, количество политических институтов";
          //   label1.Text = "";
 
-            // образец функции убывания/увеличивания значения трекбара!!!
-            /*
-            if (a < TheVal)
-                label1.Text = "a убывает";
-            if (a > TheVal)
-                label1.Text = "a растет";
-            */
-
-            if (a<0)
-            label2.Text = "При отрицательном параметре пассионарной напряженности начинается разложение государства";
-
-            if (a > 0)
-                label2.Text = "При положительном параметре пассионарной напряженности государство развивается";
-
-            if (a < 0 && x1 > Valx1)
-                label2.Text = "Государства с более сложной структурой разлагаются быстрее";
-            if (a < 0 && x1 > Valx1)
-                label2.Text = "Государства с менее сложной структурой разлагаются медленее";
-
-            if (x1 > y1 && a!=0)
-                label1.Text = "Экономика всегда стремится дифференцироваться от государства, поэтому графы удаляется разнонаправлено";
 
             //Отрисовываем графы
             //первый граф
             // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+            DrawGraph11(M0, R0, alp, bt, gm);
+
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(trackBar1.Value);
-            //  groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
+
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
+
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
 
 
-            double x1 = Convert.ToDouble(trackBar2.Value);
-          //  groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
-           
 
-            double y1 = Convert.ToDouble(trackBar3.Value);
-                 groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
-            //правила если-то
-
-            double l1 = Convert.ToDouble(trackBar4.Value);
-            //    groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-            //     groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-            //    groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-            //   groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
-
-            label1.Text = "Под сложностью экономической структуры мы подразумеваем количество едениц экономических фондов";
-
-            if (a < 0)
-                label2.Text = "При отрицательном параметре пассионарной напряженности начинается разложение экономики";
-
-            if (a > 0)
-                label2.Text = "При положительном параметре пассионарной напряженности государство развивается";
-
-            if (a < 0 && y1 > Valx2)
-                label2.Text = "Экономики с более сложной структурой разлагаются быстрее";
-            if (a < 0 && y1 > Valx2)
-                label2.Text = "Экономики с менее сложной структурой разлагаются медленее";
-
-            if (y1 > x1 && a!=0)
-                label1.Text = "Экономика всегда стремится дифференцироваться от государства, поэтому графы удаляется разнонаправлено";
-
+            // label1.Text = "Под сложностью структуры государства мы подразумеваем степень политической дифференциации, количество политических институтов";
+            //   label1.Text = "";
 
 
             //Отрисовываем графы
             //первый граф
             // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+            DrawGraph11(M0, R0, alp, bt, gm);
+
         }
 
         private void trackBar4_Scroll(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(trackBar1.Value);
-            //  groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
 
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
-            double x1 = Convert.ToDouble(trackBar2.Value);
-         //   groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
-            
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
 
-            double y1 = Convert.ToDouble(trackBar3.Value);
-            //     groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
 
-            double l1 = Convert.ToDouble(trackBar4.Value);
-               groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-            //  ПРАВИЛА
-
-
-
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
 
 
 
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-            //     groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-            //    groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-            //   groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
-
-            //ПРАВИЛА
-
-            label2.Text="Закон насыщения потребностей - с удовлетворение потребности в каком-либо благе его ценность падает или убывает";
-
-            if (l1 > k1)
-                label1.Text = "Коэффицент вливания капитала в развитие гос-структуры не достиг предела";
-            if (l1 == k1)
-                label1.Text = "Коэффицент вливания капитала в развитие гос-структуры достиг предела";
-            if (l1 < k1)
-                label1.Text = "Коэффицент вливания капитала в развитие гос-структуры превысил предел, часть капитала расходуется впустую";
-
-
+            // label1.Text = "Под сложностью структуры государства мы подразумеваем степень политической дифференциации, количество политических институтов";
+            //   label1.Text = "";
 
 
             //Отрисовываем графы
             //первый граф
             // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+            DrawGraph11(M0, R0, alp, bt, gm);
+
         }
 
         private void trackBar5_Scroll(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(trackBar1.Value);
-            //  groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
+
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
+
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
 
 
-            double x1 = Convert.ToDouble(trackBar2.Value);
-            //   groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
 
-
-            double y1 = Convert.ToDouble(trackBar3.Value);
-            //     groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
-
-            double l1 = Convert.ToDouble(trackBar4.Value);
-         //   groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-            
-
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-                 groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
-            //ПРАВИЛА
-
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-            //    groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-            //   groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
-
-            //ПРАВИЛА
-            label2.Text = "усилия людей по укреплению политического режима за счет средств экономики";
-
-            if (k1 < l1)
-                label1.Text = "Коэффицент вливания в гос-структуру не достигнут";
-            if (k1 == l1)
-                label1.Text = "Коэффицент вливания в гос-структуру достиг предела";
-            if (k1 > l1)
-                label1.Text = "Коэффицент вливания в гос-структуру превысил предел, следует прекратить вливание";
-
-
+            // label1.Text = "Под сложностью структуры государства мы подразумеваем степень политической дифференциации, количество политических институтов";
+            //   label1.Text = "";
 
 
             //Отрисовываем графы
             //первый граф
             // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+            DrawGraph11(M0, R0, alp, bt, gm);
+
         }
 
-        private void trackBar6_Scroll(object sender, EventArgs e)
-        {
-            double a = Convert.ToDouble(trackBar1.Value);
-            //  groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
 
-
-            double x1 = Convert.ToDouble(trackBar2.Value);
-            //   groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
-
-
-            double y1 = Convert.ToDouble(trackBar3.Value);
-            //     groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
-
-            double l1 = Convert.ToDouble(trackBar4.Value);
-            //   groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-
-
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-          //  groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
-            
-
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-                groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-            //ПРАВИЛА
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-            //   groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
-
-
-            label2.Text = "Закон насыщения потребностей - с удовлетворение потребности в каком-либо благе его ценность падает или убывает";
-
-            if (l2 > k2)
-                label1.Text = "Коэффицент вливания капитала в развитие экономики не достиг предела";
-            if (l2 == k2)
-                label1.Text = "Коэффицент вливания капитала в развитие экономики достиг предела";
-            if (l2 < k2)
-                label1.Text = "Коэффицент вливания капитала в развитие экономики превысил предел, часть капитала расходуется впустую";
-
-
-
-
-            //Отрисовываем графы
-            //первый граф
-            // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
-        }
-
-        private void trackBar7_Scroll(object sender, EventArgs e)
-        {
-            double a = Convert.ToDouble(trackBar1.Value);
-            //  groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
-
-
-            double x1 = Convert.ToDouble(trackBar2.Value);
-            //   groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
-
-
-            double y1 = Convert.ToDouble(trackBar3.Value);
-            //     groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
-
-            double l1 = Convert.ToDouble(trackBar4.Value);
-            //   groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-
-
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-            //  groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
-
-
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-         //   groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-            
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-               groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
-            //ПРАВИЛА
-
-               label2.Text = "усилия людей по укреплению экономики режима за счет государственных вливаний";
-
-               if (k1 < l1)
-                   label1.Text = "Коэффицент вливания в экономику не достигнут";
-               if (k1 == l1)
-                   label1.Text = "Коэффицент вливания в экономику достиг предела";
-               if (k1 > l1)
-                   label1.Text = "Коэффицент вливания в экономику превысил предел, следует прекратить вливание";
-
-
-
-            //Отрисовываем графы
-            //первый граф
-            // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
-        }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
