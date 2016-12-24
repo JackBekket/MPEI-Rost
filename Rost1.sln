@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rost1", "Gumilev1\Rost1.csproj", "{6C8D4D8D-3CE0-460E-BFFA-EB7B10DA894A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rost1", "Rost\Rost1.csproj", "{6C8D4D8D-3CE0-460E-BFFA-EB7B10DA894A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

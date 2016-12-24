@@ -8,3 +8,6 @@ C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\De
 C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\Gumilev1.exe
 C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\Gumilev1.pdb
 C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\ZedGraph.dll
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Rost\bin\Debug\Gumilev1.exe.config
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Rost\obj\Debug\Gumilev1.exe
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Rost\obj\Debug\Gumilev1.pdb
