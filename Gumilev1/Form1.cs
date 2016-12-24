@@ -82,7 +82,7 @@ namespace Gumilev1
 
      
         //задача2
-        void DrawGraph11(double a, double x1, double y1, double l1, double l2, double k1, double k2)
+        void DrawGraph11(double M0, double R0, double alp, double bt, double gm)
         {
 
             //При каждом скролле любого бегунка вызывается функция перерисовки графа, поэтому 
@@ -169,7 +169,7 @@ namespace Gumilev1
             // Создадим кривую 
             // которая будет рисоваться голубым цветом (Color.Blue),
             // Опорные точки выделяться не будут (SymbolType.None)
-            LineItem myCurve1 = pane.AddCurve("Развитие гос.структур", tr_list, Color.Blue, SymbolType.None);
+            LineItem myCurve1 = pane.AddCurve("Экономический рост", tr_list, Color.Blue, SymbolType.None);
           //  LineItem myCurve2 = pane.AddCurve("Развитие экономики", tr_list2, Color.Green, SymbolType.None);
 
             //      LineItem myCurve3 = pane.AddCurve("Минимально допустимый уровень лекарства", tr_list3, Color.Red, SymbolType.None);
@@ -209,6 +209,33 @@ namespace Gumilev1
 
          //   double a = trackBar1.Value;
 
+
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
+
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
+
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+
+
+            /*
+            double l2 = Convert.ToDouble(trackBar6.Value);
+            groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
+
+            double k2 = Convert.ToDouble(trackBar7.Value);
+            groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
+            */
+
+
+            /*
             double a = Convert.ToDouble(trackBar1.Value);
             groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
 
@@ -229,28 +256,18 @@ namespace Gumilev1
 
             double k2 = Convert.ToDouble(trackBar7.Value);
             groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
+            */
+
 
             //Отрисовываем графы
             //первый граф
            // DrawGraph11
-            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+            DrawGraph11(M0, R0, alp, bt, gm);
+           // DrawGraph11(a, x1, y1, l1, l2, k1, k2);
 
-            /*
-            label1.Text = "Объем препарата равен " + m.ToString();
-            double v = Convert.ToDouble(trackBar12.Value) / 20 + 5;
-            label12.Text = "Объем крови равен " + v.ToString();
-            double k1 = (Convert.ToDouble(trackBar13.Value) - 20) / 10;
-            label13.Text = "Коэффициент удаления первого препарата равен " + k1.ToString();
-            double k2 = (Convert.ToDouble(trackBar14.Value) - 20) / 10;
-            label14.Text = "Коэффициент удаления второго препарата равен " + k2.ToString();
-            label15.Text = "Концентрация первого препарата убывает, т.к. коэффициент удаления (k1) > 0";
-            label16.Text = "Концентрация второго препарата убывает, т.к. коэффициент удаления (k2) > 0";
-            double n = trackBar15.Value * 0.00005;
-            label17.Text = "Объем препарата равен " + n.ToString();
-            DrawGraph1(m, v, k1, k2, n);
-            */
+          
 
-            label1.Text = "В задаче представлена модель 'Политика - экономика', состоящая из системы двух дифференциальных уравнений";
+            label1.Text = "В задаче представлена модель экономического роста с линейной производственной функцией";
             label2.Text = "Выполнил Пономарев С.А.";
 
 
