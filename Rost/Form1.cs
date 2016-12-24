@@ -68,22 +68,33 @@ namespace Gumilev1
         {
             double M = M0 * ((gm - bt) * t);
             double R = R0 * Math.Exp(alp * t);
+
             double x = R / M;
-            double Y = M * x;
+
+            double funx = Math.Sin(x);
+
+            double Y = M * funx;
+
             return Y;
 
 
         }
 
 
-        /*
+        
       //КРИВАЯ M
-        double oM()
+        double oM(double M0,double gm,double bt, double t)
         {
-
-
+            double M = M0 * ((gm - bt) * t);
+            return M;
         }
-        */
+        
+        //КРИВАЯ R
+        double oR(double R0, double alp, double t)
+        {
+            double R = R0 * Math.Exp(alp * t);
+            return R;
+        }
 
 
         //функция рисования ГРАФИКА
@@ -116,7 +127,7 @@ namespace Gumilev1
             // Создадим список точек
             PointPairList tr_list = new PointPairList();
             PointPairList tr_list2 = new PointPairList();
-            //       PointPairList tr_list3 = new PointPairList();
+                   PointPairList tr_list3 = new PointPairList();
 
             double xmin = 0;
             double xmax = 5;
@@ -159,8 +170,8 @@ namespace Gumilev1
 
                 //  tr_list2.Add(x, o2(a, x, l2, y1, k2));
                 tr_list.Add(x, o3(M0,gm,bt,x,R0,alp));
-
-
+                tr_list2.Add(x, oM(M0,gm,bt,x));
+                tr_list3.Add(x, oR(R0,alp,x));
                 //orig
                 //     tr_list.Add(x, o1(a, x1, l1, y1, k1));
                 //    tr_list2.Add(y, o2(a,x1,l2,y1,k2));
@@ -181,6 +192,8 @@ namespace Gumilev1
             // которая будет рисоваться голубым цветом (Color.Blue),
             // Опорные точки выделяться не будут (SymbolType.None)
             LineItem myCurve1 = pane.AddCurve("Экономический рост", tr_list, Color.Blue, SymbolType.None);
+            LineItem myCurve2 = pane.AddCurve("мощность", tr_list2, Color.Green, SymbolType.None);
+            LineItem myCurve3 = pane.AddCurve("численность рабочих", tr_list3, Color.Red, SymbolType.None);
           //  LineItem myCurve2 = pane.AddCurve("Развитие экономики", tr_list2, Color.Green, SymbolType.None);
 
             //      LineItem myCurve3 = pane.AddCurve("Минимально допустимый уровень лекарства", tr_list3, Color.Red, SymbolType.None);
