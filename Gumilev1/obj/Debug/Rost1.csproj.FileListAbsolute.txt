@@ -1,0 +1,3 @@
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\bin\Debug\Gumilev1.exe.config
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Gumilev1.exe
+C:\Users\Beket\Desktop\Проекты C#\Модель Роста\Gumilev1\obj\Debug\Gumilev1.pdb
