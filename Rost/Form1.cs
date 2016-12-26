@@ -30,9 +30,9 @@ namespace Gumilev1
         // x - число работников на еденице мощности
         // Y - нац.продукт.
         // M0,R0 - нач значения, t - время.
-        // alp,alpha - коэффицент прироста занятых работников
-        // bt,beta - коэффицент выбытия мощностей (износ)
-        // gm, gamma - коэффицент времени, требуемого на ввод новых мощностей.
+        // alp,alpha - коэффициент прироста занятых работников
+        // bt,beta - коэффициент выбытия мощностей (износ)
+        // gm, gamma - коэффициент времени, требуемого на ввод новых мощностей.
 
 
         //ДОП.
@@ -240,13 +240,13 @@ namespace Gumilev1
             groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
             double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
 
             double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
 
             double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
 
 
             /*
@@ -254,7 +254,7 @@ namespace Gumilev1
             groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
 
             double k2 = Convert.ToDouble(trackBar7.Value);
-            groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
+            groupBox7.Text = "коэффициент вливания капитала в экономику= " + k2.ToString();
             */
 
 
@@ -272,13 +272,13 @@ namespace Gumilev1
             groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
 
             double k1 = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
+            groupBox5.Text = "коэффициент вливания капитала в государство " + k1.ToString();
 
             double l2 = Convert.ToDouble(trackBar6.Value);
             groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
 
             double k2 = Convert.ToDouble(trackBar7.Value);
-            groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
+            groupBox7.Text = "коэффициент вливания капитала в экономику= " + k2.ToString();
             */
 
 
@@ -292,7 +292,7 @@ namespace Gumilev1
 
             label1.Text = "В задаче представлена модель экономического роста с синусоидной производственной функцией (в случае линейной функции Y всегда будет равен R";
             label2.Text = "Выполнил Пономарев С.А.";
-            label4.Text = "Y - производимый продукт, R - число занятых работников, M - задействованные мощности \n M0-мощность в начальный момент времени, R0-количество работников в начальный момент времени, \n далее коэффиценты альфа бета и гамма соответственно \n  ";
+            label4.Text = "Y - производимый продукт, R - число занятых работников, M - задействованные мощности \n M0-мощность в начальный момент времени, R0-количество работников в начальный момент времени, \n далее коэффициенты альфа бета и гамма соответственно \n  ";
 
             label3.Text = " Y(t)=M(t) * f(x(t)), M(t) = M0^((gamma-beta)*t), x(t)=R(t)/M(t), \n f(x)=Abs(Sin(x)) - Sin как пример, Abs - т.к. должна быть определена на 0<x<xM \n R(t)=R0*exp(alpha*t) ";
 
@@ -331,13 +331,13 @@ namespace Gumilev1
             groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
             double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
 
             double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
 
             double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
 
 
 
@@ -382,13 +382,13 @@ namespace Gumilev1
             groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
             double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
 
             double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
 
             double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
 
 
 
@@ -398,7 +398,7 @@ namespace Gumilev1
 
        //     label1.Text = "Темпы экономического роста Y во многом зависят от M0 и R0";
             label2.Text = "Количество занятых работников в начальный момент времени";
-            label1.Text = "В развивающейся экономике число рабочих растет экспоненциально с коэффицентом альфа.";
+            label1.Text = "В развивающейся экономике число рабочих растет экспоненциально с коэффициентом альфа.";
 
             //Отрисовываем графы
             //первый граф
@@ -416,13 +416,13 @@ namespace Gumilev1
             groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
             double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
 
             double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
 
             double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
 
 
 
@@ -430,9 +430,9 @@ namespace Gumilev1
             //   label1.Text = "";
 
 
-            label1.Text = "Коэффицент альфа определяет с какой скоростью растет количество рабочих";
+            label1.Text = "коэффициент альфа определяет с какой скоростью растет количество рабочих";
         //    label2.Text = "Количество занятых работников в начальный момент времени";
-            label2.Text = "В развивающейся экономике число рабочих растет экспоненциально с коэффицентом альфа.";
+            label2.Text = "В развивающейся экономике число рабочих растет экспоненциально с коэффициентом альфа.";
 
            
 
@@ -452,13 +452,13 @@ namespace Gumilev1
             groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
             double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
 
             double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
 
             double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
 
 
 
@@ -466,7 +466,7 @@ namespace Gumilev1
             //   label1.Text = "";
 
     //        label2.Text = "Коэффицет износа мощностей.";
-            label2.Text = "Коэффицент бета, определяющий скорость выбытия мощностей";
+            label2.Text = "коэффициент бета, определяющий скорость выбытия мощностей";
             if (bt == gm)
                 label1.Text = "Функция мощностей M(t)=M0^((гамма-бета)*t), соответственно если темп выбытия мощностей будет равен темпу введения новых в эксплуатацию,\n то рост прекратится";
             else
@@ -492,20 +492,20 @@ namespace Gumilev1
             groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
 
             double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Коэффицент прироста работников" + alp.ToString();
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
 
             double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Коэффицент выбытия мощностей" + bt.ToString();
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
 
             double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "Коэффицент времени ввода новых мощностей" + gm.ToString();
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
 
 
 
             // label1.Text = "Под сложностью структуры государства мы подразумеваем степень политической дифференциации, количество политических институтов";
             //   label1.Text = "";
 
-            label2.Text = "Коэффицент ввода новых мощностей в эксплуатацию";
+            label2.Text = "коэффициент ввода новых мощностей в эксплуатацию";
       //      label1.Text = "";
             if (gm == bt)
                 label1.Text = "Функция мощностей M(t)=M0^((гамма-бета)*t), соответственно если темп выбытия мощностей будет равен темпу введения новых в эксплуатацию,\n то рост прекратится";
