@@ -411,10 +411,10 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(42, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(275, 83);
+            this.label6.Size = new System.Drawing.Size(346, 83);
             this.label6.TabIndex = 0;
-            this.label6.Text = "В какой момент времени будет достигнут максимум Y(t), если M0=2, а разница между " +
-    "гамма и бета коэффициентами=4?";
+            this.label6.Text = "Найти значение Y(t) в максимальной точке, если разница коэффициентов гамма и бета" +
+    " = коэффициенту альфа =1, m0=1,а R0=2?";
             // 
             // button2
             // 
