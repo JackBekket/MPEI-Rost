@@ -66,7 +66,7 @@ namespace Gumilev1
         //МОДЕЛЬ РОСТА
         double o3(double M0, double gm, double bt, double t, double R0, double alp)
         {
-            double M = M0 * ((gm - bt) * t);
+            double M = M0 * Math.Exp(((gm - bt) * t));
             double R = R0 * Math.Exp(alp * t);
 
             double x = R / M;
@@ -86,7 +86,7 @@ namespace Gumilev1
       //КРИВАЯ M
         double oM(double M0,double gm,double bt, double t)
         {
-            double M = M0 * ((gm - bt) * t);
+            double M = M0 * Math.Exp(((gm - bt) * t));
             return M;
         }
         
@@ -540,6 +540,48 @@ namespace Gumilev1
             // DrawGraph11
             DrawGraph11(M0, R0, alp, bt, gm);
             //  DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 3;
+            trackBar2.Value = 1;
+            trackBar3.Value = 1;
+            trackBar4.Value = 1;
+            trackBar5.Value = 4;
+
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
+
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
+
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
+
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
+
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
+
+            DrawGraph11(M0, R0, alp, bt, gm);
+
+            label1.Text = "В задаче представлена модель экономического роста с синусоидной производственной функцией (в случае линейной функции Y всегда будет равен R";
+            label2.Text = "Выполнил Пономарев С.А.";
+            label4.Text = "В качестве примера рассматривается модель когда дельта между коэффициентом ввода мощностей и коэффициентом вывода мощностей = 3, а начальная мощность равна 3. \n В таком случае Y(t)достигает максимума в точке 37, во временном интервале 4, т.к. в этой точке Y(t)=M(t), что свидетельствует о том, что число рабочих мест полностью заполнено, \n а при последующем увеличении числа рабочих, часть из них будет безработными";
+
+            label3.Text = " Y(t)=M(t) * f(x(t)), M(t) = M0^((gamma-beta)*t), x(t)=R(t)/M(t), \n f(x)=Abs(Sin(x)) - Sin как пример, Abs - т.к. должна быть определена на 0<x<xM \n R(t)=R0*exp(alpha*t) ";
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "4" || textBox1.Text == "4,0" || textBox1.Text == "4.0")
+                MessageBox.Show("Правильный ответ! - тот же, что и в примере, т.к. ");
+            else
+                MessageBox.Show("Неправильный ответ!");
         }
         
         

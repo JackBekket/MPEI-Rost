@@ -62,6 +62,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.groupBox5);
@@ -178,7 +180,7 @@
             this.trackBar5.Name = "trackBar5";
             this.trackBar5.Size = new System.Drawing.Size(199, 45);
             this.trackBar5.TabIndex = 1;
-            this.trackBar5.Value = 4;
+            this.trackBar5.Value = 2;
             this.trackBar5.Scroll += new System.EventHandler(this.trackBar5_Scroll);
             // 
             // groupBox4
@@ -214,7 +216,7 @@
             // trackBar3
             // 
             this.trackBar3.Location = new System.Drawing.Point(22, 23);
-            this.trackBar3.Maximum = 2;
+            this.trackBar3.Maximum = 5;
             this.trackBar3.Minimum = 1;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(199, 45);
@@ -241,7 +243,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(701, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(230, 347);
+            this.panel3.Size = new System.Drawing.Size(230, 435);
             this.panel3.TabIndex = 21;
             // 
             // label4
@@ -249,7 +251,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(19, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 317);
+            this.label4.Size = new System.Drawing.Size(208, 390);
             this.label4.TabIndex = 0;
             this.label4.Text = "label4";
             // 
@@ -291,7 +293,7 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(199, 45);
             this.trackBar1.TabIndex = 0;
-            this.trackBar1.Value = 3;
+            this.trackBar1.Value = 1;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll_1);
             // 
             // tabPage2
@@ -385,6 +387,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Ответить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -410,7 +413,18 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(275, 83);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Задача";
+            this.label6.Text = "В какой момент времени будет достигнут максимум Y(t), если M0=2, а разница между " +
+    "гамма и бета коэффициентами=4?";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(402, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Пример";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -488,6 +502,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
 
     }
 }
