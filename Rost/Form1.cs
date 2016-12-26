@@ -299,77 +299,9 @@ namespace Gumilev1
         }
 
 
-        //МОЩНОСТЬ М0
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-      
-            //МОЩНОСТЬ М0
-
-
-            // образец функции убывания/увеличивания значения трекбара!!!
-            /*
-            if (a < TheVal)
-                label1.Text = "a убывает";
-            if (a > TheVal)
-                label1.Text = "a растет";
-            */
-
-            /*
-            if (a < TheVal)
-                label1.Text = "Большая пассионарная напряженность увеличивает скорость процессов развития";
-            if (a > TheVal)
-                label1.Text = "Меньшая пассионарная напряженность уменьшает скорость процессов развития";
-            */
-
-
-
-
-            double M0 = Convert.ToDouble(trackBar1.Value);
-            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
-
-            double R0 = Convert.ToDouble(trackBar2.Value);
-            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
-
-            double alp = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
-
-            double bt = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
-
-            double gm = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
-
-
-
-
-            /*
-            if (a > 0)
-                label2.Text = "При положительных значениях A наблюдается склонность к развитию процессов";
-            if (a < 0)
-                label2.Text = "При отрицательных значениях наблюдается склонность к разложению";
-        */
-             
-             
-            /*
-            else
-                label1.Text = "";
-            label2.Text = "";
-            */
-
-        //    label1.Text = "Темпы экономического роста Y во многом зависят от M0 и R0";
-
-            label1.Text = "Функция мощности M(t) является верхним пределом функции роста Y(t)";
-
-            label2.Text = "Мощность в начальный момент времени";
-
-
-
-            //Отрисовываем графы
-            //первый граф
-            // DrawGraph11
-            DrawGraph11(M0, R0, alp, bt, gm);
-          //  DrawGraph11(a, x1, y1, l1, l2, k1, k2);
-        }
+ //В ходе работы на данной программой возник баг при отрисовке графика на табе
+        //в результате которого слелети бинды (bind) к скроллам, поэтому функция trackBar1_Scroll
+        //была переписана и перенесена в конец кода
 
 
         private void trackBar2_Scroll(object sender, EventArgs e)
@@ -538,6 +470,78 @@ namespace Gumilev1
             Valx2 = Convert.ToDouble(trackBar3.Value);
         }
 
+        
+        private void trackBar1_Scroll_1(object sender, EventArgs e)
+        {
+
+            //МОЩНОСТЬ М0
+
+
+            // образец функции убывания/увеличивания значения трекбара!!!
+            /*
+            if (a < TheVal)
+                label1.Text = "a убывает";
+            if (a > TheVal)
+                label1.Text = "a растет";
+            */
+
+            /*
+            if (a < TheVal)
+                label1.Text = "Большая пассионарная напряженность увеличивает скорость процессов развития";
+            if (a > TheVal)
+                label1.Text = "Меньшая пассионарная напряженность уменьшает скорость процессов развития";
+            */
+
+
+
+
+            double M0 = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Мощность в начальный элемент времени " + M0.ToString();
+
+            double R0 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Число занятых работников в начальный момент времени" + R0.ToString();
+
+            double alp = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "коэффициент прироста работников" + alp.ToString();
+
+            double bt = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "коэффициент выбытия мощностей" + bt.ToString();
+
+            double gm = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "коэффициент времени ввода новых мощностей" + gm.ToString();
+
+
+
+
+            /*
+            if (a > 0)
+                label2.Text = "При положительных значениях A наблюдается склонность к развитию процессов";
+            if (a < 0)
+                label2.Text = "При отрицательных значениях наблюдается склонность к разложению";
+        */
+
+
+            /*
+            else
+                label1.Text = "";
+            label2.Text = "";
+            */
+
+            //    label1.Text = "Темпы экономического роста Y во многом зависят от M0 и R0";
+
+            label1.Text = "Функция мощности M(t) является верхним пределом функции роста Y(t)";
+
+            label2.Text = "Мощность в начальный момент времени";
+
+
+
+            //Отрисовываем графы
+            //первый граф
+            // DrawGraph11
+            DrawGraph11(M0, R0, alp, bt, gm);
+            //  DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+        }
+        
         
 
 
