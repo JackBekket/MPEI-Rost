@@ -240,29 +240,7 @@ namespace Gumilev1
             */
 
 
-            /*
-            double a = Convert.ToDouble(trackBar1.Value);
-            groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
-
-            double x1 = Convert.ToDouble(trackBar2.Value);
-            groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
-
-            double y1 = Convert.ToDouble(trackBar3.Value);
-            groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
-
-            double l1 = Convert.ToDouble(trackBar4.Value);
-            groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
-
-            double k1 = Convert.ToDouble(trackBar5.Value);
-            groupBox5.Text = "коэффициент вливания капитала в государство " + k1.ToString();
-
-            double l2 = Convert.ToDouble(trackBar6.Value);
-            groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
-
-            double k2 = Convert.ToDouble(trackBar7.Value);
-            groupBox7.Text = "коэффициент вливания капитала в экономику= " + k2.ToString();
-            */
-
+        
 
             //Отрисовываем графы
             //первый граф
@@ -706,17 +684,19 @@ namespace Gumilev1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "135")
-                MessageBox.Show("Правильный ответ! при текущем R0=2 и M0=1 ответ всегда будет 135, пока разница коэффициентов гамма и бета будут равны коэффициенту альфа равному '1' ");
-            else
-                MessageBox.Show("Неправильный ответ!, правильный ответ '135'");
+         //   if (textBox1.Text == "135")
+            //    MessageBox.Show("Правильный ответ! при текущем R0=2 и M0=1 ответ всегда будет 135, пока разница коэффициентов гамма и бета будут равны коэффициенту альфа равному '1' ");
+         //   else
+            //    MessageBox.Show("Неправильный ответ!, правильный ответ '135'");
+
+
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // string selectedState = comboBox1.SelectedItem.ToString();
-            //  MessageBox.Show(selectedState);
-            //  string selectedState = comboBox1.SelectedIndex.ToString();
+         
             int selectedState = comboBox1.SelectedIndex;
             sl1 = selectedState;
             //    MessageBox.Show(selectedState);
