@@ -406,7 +406,8 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(586, 104);
             this.label6.TabIndex = 0;
-            this.label6.Text = resources.GetString("label6.Text");
+            this.label6.Text = "\r\n\r\nКакое равенство между коэффициентами должно соблюдаться, что бы наблюдался ус" +
+    "тойчивый экономический рост?\r\n\r\n";
             // 
             // comboBox1
             // 

@@ -117,6 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label9.Text" xml:space="preserve">
+    <value>1.Коэффициент прироста работников должен быть больше коэффициента прироста мощностей
+2.Коэффициент убытия работников должен быть меньше коэффициента прироста работников, а рост мощностей должен быть больше прироста работников
+3.Среднее значение между выбытием и вводом мощностей должно быть равно коэффициенту прироста работников</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2386,18 +2391,6 @@
         XLzSyyM5Z2fBISOJE5L/AIJ1eCJNWm+LXxkurOa1uvjp4xfXLAzx+XK+i2drb6XpTlcAqs1rZrcqD82L
         sbsHIH0J4s8JaX498PXWka1p9nq2l36eVc2d5Cs0FymRlHRgVZTjlSCD0IrUoAKKKKACiiigAooooAKK
         KKACiiigAooooAKKKKACiiigAooooAKKKKAP/9k=
-</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>1.Коэффициент прироста работников должен быть больше коэффициента прироста мощностей
-2.Коэффициент убытия работников должен быть меньше коэффициента прироста работников, а рост мощностей должен быть больше прироста работников
-3.Среднее значение между выбытием и вводом мощностей должно быть равно коэффициенту прироста работников</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Для того, что бы наблюдался устойчивый экономический рост, нужно соблюдать условие при котором 
-количество работников примерно равно количеству мощностей.
-
-Какое равенство между коэффициентами должно соблюдаться?
 </value>
   </data>
 </root>
