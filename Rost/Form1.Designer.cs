@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.trackBar5 = new System.Windows.Forms.TrackBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -62,11 +62,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -118,6 +116,16 @@
             this.tabPage1.Text = "Модель";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(402, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Пример";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
@@ -148,20 +156,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(541, 538);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(375, 158);
             this.panel1.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(369, 137);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
             // 
             // groupBox5
             // 
@@ -416,16 +414,6 @@
             this.label6.Text = "Найти значение Y(t) в максимальной точке, если разница коэффициентов гамма и бета" +
     " = коэффициенту альфа =1, m0=1,а R0=2?";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(402, 411);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Пример";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,7 +427,6 @@
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
@@ -476,7 +463,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.GroupBox groupBox4;
