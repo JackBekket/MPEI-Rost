@@ -62,6 +62,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -366,6 +367,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.label7);
@@ -379,7 +381,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(254, 206);
+            this.button1.Location = new System.Drawing.Point(300, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 20);
             this.button1.TabIndex = 3;
@@ -389,7 +391,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 204);
+            this.textBox1.Location = new System.Drawing.Point(120, 153);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(128, 20);
             this.textBox1.TabIndex = 2;
@@ -412,6 +414,22 @@
             this.label6.Size = new System.Drawing.Size(586, 104);
             this.label6.TabIndex = 0;
             this.label6.Text = resources.GetString("label6.Text");
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Коэффициент прироста работников должен быть больше коэффициента прироста мощносте" +
+                "й",
+            "Коэффициент убытия работников должен быть меньше коэффициента прироста работников" +
+                ", а рост мощностей должен быть больше прироста работников",
+            "Среднее значение между выбытием и вводом мощностей должно быть равно коэффициенту" +
+                " прироста работников"});
+            this.comboBox1.Location = new System.Drawing.Point(127, 206);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -488,6 +506,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
 
     }
 }

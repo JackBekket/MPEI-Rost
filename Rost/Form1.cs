@@ -18,7 +18,7 @@ namespace Gumilev1
             InitializeComponent();
          //   public TheVal1;
         }
-
+        public int sl1;
         public double TheVal;
         public double Valx1;
         public double Valx2;
@@ -49,19 +49,7 @@ namespace Gumilev1
         //для данной задачи
 
 
-        /*
-        //возвращает график развития гос-ва (структуры)
-        double o1(double a, double x1, double l1, double y1, double k1)
-        {
-            return (a * x1 + l1 * y1 - k1 * Math.Pow(y1,2));
-        }
-
-        //возвращает график развития экономики
-        double o2(double a, double x1, double l2, double y1, double k2)
-        {
-            return (a * y1 - l2 * x1 + k2 * Math.Pow(x1, 2));
-        }
-        */
+      
 
         //МОДЕЛЬ РОСТА
         double o3(double M0, double gm, double bt, double t, double R0, double alp)
@@ -180,12 +168,7 @@ namespace Gumilev1
 
 
 
-            /*
-            for (double x = xmin; x <= xmax; x += 0.01)
-            {
-                tr_list3.Add(x, n);
-            }
-              */
+          
 
             // Создадим кривую 
             // которая будет рисоваться голубым цветом (Color.Blue),
@@ -195,8 +178,7 @@ namespace Gumilev1
             LineItem myCurve3 = pane.AddCurve("численность рабочих", tr_list3, Color.Red, SymbolType.None);
           //  LineItem myCurve2 = pane.AddCurve("Развитие экономики", tr_list2, Color.Green, SymbolType.None);
 
-            //      LineItem myCurve3 = pane.AddCurve("Минимально допустимый уровень лекарства", tr_list3, Color.Red, SymbolType.None);
-
+           
             // Включим отображение сетки
             pane.XAxis.MajorGrid.IsVisible = true;
             pane.YAxis.MajorGrid.IsVisible = true;
@@ -728,6 +710,16 @@ namespace Gumilev1
                 MessageBox.Show("Правильный ответ! при текущем R0=2 и M0=1 ответ всегда будет 135, пока разница коэффициентов гамма и бета будут равны коэффициенту альфа равному '1' ");
             else
                 MessageBox.Show("Неправильный ответ!, правильный ответ '135'");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // string selectedState = comboBox1.SelectedItem.ToString();
+            //  MessageBox.Show(selectedState);
+            //  string selectedState = comboBox1.SelectedIndex.ToString();
+            int selectedState = comboBox1.SelectedIndex;
+            sl1 = selectedState;
+            //    MessageBox.Show(selectedState);
         }
         
         
